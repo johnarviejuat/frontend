@@ -1,16 +1,28 @@
-# React + Vite
+1.RUNNING THE FRONTEND (REACT UI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+System Requirements:
+- Node.js (v18+ recommended)
+- npm package manager
 
-Currently, two official plugins are available:
+Execution Steps:
+1. Open a command prompt or terminal window.
+2. Navigate directly to the frontend folder directory:
+   cd frontend
+3. Install the application dependencies:
+   npm install
+4. Start the local Vite development web server:
+   npm run dev
+5. Open the browser to the local address provided in the console 
+   (typically http://localhost:5173).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+CRITICAL: Environment Variable Match (.env)
+The frontend relies on an environment configuration file to locate your 
+backend service without using browser local storage.
 
-## React Compiler
+1. Open the file named '.env' inside the root of your 'frontend' folder.
+2. Make sure the 'VITE_API_BASE_URL' port matches your running Visual 
+   Studio HTTPS port number exactly:
+   VITE_API_BASE_URL=https://localhost:[YOUR_BACKEND_PORT_NUMBER]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The backend API project must be kept running in the background for the 
+frontend onboarding form to submit data and load the customer directory successfully.
